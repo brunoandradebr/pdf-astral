@@ -31,12 +31,14 @@ export function App() {
       });
 
       firstPage?.drawRectangle({
-        x: size.width * 0.35,
+        x: 200 - size.width * 0.35,
         y: size.height * 0,
-        width: 180,
+        width: 480,
         height: 80,
         color: rgb(1, 1, 1),
       });
+
+      firstPage.setCropBox(0, 75, size.width, size.height - 130);
 
       const modified = await document.save();
 
